@@ -144,3 +144,6 @@ namespace eTickets.Migrations
         }
     }
 }
+//on package manager console cmd-
+//Add-Migraton Initial
+//Update-database
