@@ -23,16 +23,16 @@ namespace eTickets.Models
 
 
         //Relationships
-        public List<Actor_Movie> Actor_Movies { get; set; }
+        public List<Actor_Movie> Actor_Movies { get; set; } //define relation movie have multiple actormovies
 
         //Cinema
-        public int CinemaId { get; set; }
+        public int CinemaId { get; set; } //define relation movie have multiple cinema with foregnkey
         [ForeignKey("CinemaId")]
 
         public Cinema Cinema { get; set; }
 
         //Producer
-        public int ProducerId { get; set; }
+        public int ProducerId { get; set; } //define relation movie have multiple producer with foregnkey
         [ForeignKey("ProducerId")]
 
         public Producer Producer { get; set; }
