@@ -14,7 +14,7 @@ namespace eTickets.Data
         {
 
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder) //define relationship one to many
         {
             modelBuilder.Entity<Actor_Movie>().HasKey(am => new
             {
@@ -26,6 +26,8 @@ namespace eTickets.Data
 
             base.OnModelCreating(modelBuilder);
         }
+
+        //need to define table name for each model (Actor,Movie,Actor_Movies,Cinema,Producers)
         public DbSet<Actor> Actors { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actor_Movie> Actor_Movies { get; set; }
