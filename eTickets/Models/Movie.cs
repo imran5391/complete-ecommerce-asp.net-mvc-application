@@ -19,7 +19,7 @@ namespace eTickets.Models
         public string ImageUrl { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public MovieCategory MovieCategory { get; set; }
+        public MovieCategory MovieCategory { get; set; } //import the namespace for the MovieCategory namespace eTickets.Data
 
 
         //Relationships
