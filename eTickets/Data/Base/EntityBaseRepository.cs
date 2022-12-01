@@ -9,11 +9,14 @@ namespace eTickets.Data.Base
 {
     public class EntityBaseRepository<T> : IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {
-        private readonly AppDbContext _context;
-        public EntityBaseRepository(AppDbContext context)
+        private readonly AppDbContext _context; //we need to inject the AppDbContext
+        public EntityBaseRepository(AppDbContext context) //create constructor
         {
             _context = context;
         }
+
+        //this part we are going to implement the generic versions
+        //of the get all async and get by id asyn
         public async Task AddAsync(T entity) // Implementing Add method from actors service/ ActorsController
         { 
             await _context.Set<T>().AddAsync(entity);
