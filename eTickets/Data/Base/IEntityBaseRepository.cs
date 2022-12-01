@@ -11,6 +11,6 @@ namespace eTickets.Data.Base
         Task<T> GetByIdAsync(int id); //Updating ActorsService and ActorsController with "Async"
         Task AddAsync(T entity);
         Task UpdateAsync(int id, T entity); //UpdateAsync method in ActorsService
-        Task DeleteAsync(int id);
+        Task DeleteAsync(int id); //DeleteAsync method in ActorsService
     }
 }
