@@ -39,12 +39,12 @@ namespace eTickets.Controllers
         }
 
         //Get: Actors/Details/1
-
-        public async Task<IActionResult> Details(int id)
+        //Getting item by id
+        public async Task<IActionResult> Details(int id) //Adding new controller action
         {
             var actorDetails = await _service.GetByIdAsync(id);
             if (actorDetails == null) return View("Empty");
-            return View(actorDetails);
+            return View(actorDetails);   //Adding Details view
         }
 
         //Get: Actors/Edit
