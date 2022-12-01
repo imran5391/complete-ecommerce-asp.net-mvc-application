@@ -30,7 +30,7 @@ namespace eTickets.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([Bind("FullName,ProfilePictureURL,Bio")]Actor actor)
         {
-            if(!ModelState.IsValid)
+            if(!ModelState.IsValid)         //Adding new ActionResult for Create
             {
                 return View(actor);
             }
