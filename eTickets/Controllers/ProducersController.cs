@@ -11,7 +11,7 @@ namespace eTickets.Controllers
 {
     public class ProducersController : Controller
     {
-        private readonly IProducersService _service;
+        private readonly IProducersService _service;  //inject the iproducers service from startup.cs
         public ProducersController(IProducersService service)
         {
             _service = service;
