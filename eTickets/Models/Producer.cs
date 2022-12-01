@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eTickets.Models
 {
-    public class Producer: IEntityBase
+    public class Producer: IEntityBase  //from IProducersService Producer inherit from IEntityBase
     {
         [Key]
         public int Id { get; set; }
