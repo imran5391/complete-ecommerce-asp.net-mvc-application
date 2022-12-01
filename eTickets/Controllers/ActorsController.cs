@@ -48,7 +48,8 @@ namespace eTickets.Controllers
         }
 
         //Get: Actors/Edit
-        public async Task<IActionResult> Edit(int id)
+        // Adding new controller action
+        public async Task<IActionResult> Edit(int id) ////Adding Details view
         {
             var actorDetails = await _service.GetByIdAsync(id);
             if (actorDetails == null) return View("Not Found");
