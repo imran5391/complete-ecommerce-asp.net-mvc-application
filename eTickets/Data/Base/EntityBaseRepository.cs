@@ -22,7 +22,7 @@ namespace eTickets.Data.Base
         //AddAsync() method in base repository 
          
 
-        public async Task DeleteAsync(int id)  //DeleteAsync method in ActorsService
+        public async Task DeleteAsync(int id)  //DeleteAsync method in ActorsService, //DeleteAsync() in base repository
         {
             var entity = await _context.Set<T>().FirstOrDefaultAsync(n => n.Id == id);
             EntityEntry entityEntry = _context.Entry<T>(entity);
@@ -35,7 +35,7 @@ namespace eTickets.Data.Base
 
         public async Task<T> GetByIdAsync(int id) => await _context.Set<T>().FirstOrDefaultAsync(n => n.Id == id); //Updating GetById method in ActorsService
 
-        public async Task UpdateAsync(int id, T entity)
+        public async Task UpdateAsync(int id, T entity) //UpdateAsync() in base repository 
         {
             EntityEntry entityEntry = _context.Entry<T>(entity);
             entityEntry.State = EntityState.Modified;
