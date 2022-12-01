@@ -17,11 +17,14 @@ namespace eTickets.Data.Base
 
         //this part we are going to implement the generic versions
         //of the get all async and get by id asyn
-        public async Task AddAsync(T entity) => await _context.Set<T>().AddAsync(entity);
+
         // Implementing Add method from actors service/ ActorsController
         //AddAsync() method in base repository 
-         
-
+        public async Task AddAsync(T entity)
+        {
+            await _context.Set<T>().AddAsync(entity);
+            await _context.SaveChangesAsync();
+        }
         public async Task DeleteAsync(int id)  //DeleteAsync method in ActorsService, //DeleteAsync() in base repository
         {
             var entity = await _context.Set<T>().FirstOrDefaultAsync(n => n.Id == id);
