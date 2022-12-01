@@ -67,7 +67,8 @@ namespace eTickets.Controllers
         }
 
         //Get: Actors/Delete/1
-        public async Task<IActionResult> Delete(int id)
+        // Adding new controller action
+        public async Task<IActionResult> Delete(int id) //Adding Details view
         {
             var actorDetails = await _service.GetByIdAsync(id);
             if (actorDetails == null) return View("Not Found");
