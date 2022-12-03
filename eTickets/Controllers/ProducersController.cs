@@ -46,7 +46,7 @@ namespace eTickets.Controllers
         }
 
         //GET: Producer/Edit/1
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit(int id) //Adding Edit Action method for Updating a producer
         {
             var producerDetails = await _service.GetByIdAsync(id);
             return View(producerDetails);
