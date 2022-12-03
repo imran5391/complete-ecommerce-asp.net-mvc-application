@@ -13,7 +13,7 @@ namespace eTickets.Models
         public int Id { get; set; }
 
         [Display(Name = "Profile Picture")]
-        [Required(ErrorMessage = "Profile Picture is required")]  //validation
+        [Required(ErrorMessage = "Profile Picture is required")]  //Add validation
         public string ProfilePictureURL { get; set; }
 
         [Display(Name = "FullName")]
