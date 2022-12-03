@@ -32,7 +32,7 @@ namespace eTickets.Controllers
         }
 
         //GET: Producer/Create
-        public IActionResult Create()  //44.Adding new producer to database
+        public IActionResult Create()  //.Adding new action method for create
         {
             return View();
         }
