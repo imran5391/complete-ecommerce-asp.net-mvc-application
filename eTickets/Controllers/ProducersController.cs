@@ -66,7 +66,7 @@ namespace eTickets.Controllers
         }
 
         //GET: Producer/Delete/1
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id) // Adding Delete Method for Deleting a producer from database
         {
             var producerDetails = await _service.GetByIdAsync(id);
             if (producerDetails == null) return View("Not Found");
